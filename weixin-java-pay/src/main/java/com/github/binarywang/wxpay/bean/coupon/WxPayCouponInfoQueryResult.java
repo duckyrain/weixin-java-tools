@@ -1,6 +1,6 @@
 package com.github.binarywang.wxpay.bean.coupon;
 
-import com.github.binarywang.wxpay.bean.result.WxPayBaseResult;
+import com.github.binarywang.wxpay.bean.result.BaseWxPayResult;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @XStreamAlias("xml")
-public class WxPayCouponInfoQueryResult extends WxPayBaseResult {
+public class WxPayCouponInfoQueryResult extends BaseWxPayResult {
   /**
    * <pre>
    * 字段名：设备号.
@@ -74,15 +74,15 @@ public class WxPayCouponInfoQueryResult extends WxPayBaseResult {
   /**
    * <pre>
    * 字段名：代金券使用门槛.
-   * 变量名：coupon_mininum
+   * 变量名：coupon_minimum 微信文档有误
    * 是否必填：是
    * 示例值：10
    * 类型：Unsinged int
    * 说明：代金券使用最低限额,单位是分
    * </pre>
    */
-  @XStreamAlias("coupon_mininum")
-  private Integer couponMininum;
+  @XStreamAlias("coupon_minimum")
+  private Integer couponMinimum;
 
   /**
    * <pre>
